@@ -1,0 +1,29 @@
+Starting Classes:
+-- Fighter//Shield Bash, Double strike, Fortify
+-- Mage//Thunderball, Fireball , Iceball
+-- Thief//Steal, Quick Jabs, Smoke
+
+# The above will be the baseline starting class for the game and the lvl up action rewards for them
+# 1 class action can be unlocked at lvl 3, 6, and 9
+# All class actions are carried over to the advanced class as well but will be improvements for basic class
+
+# Eventually they will be able to choose an advanced class at lvl 10
+
+Fighter:
+-- Paladin//Holy strike, Cure, Divine blessing, Smite's Hammer
+-- Warrior//Warcry, Overhead Slam, Haymaker
+Mage:
+-- Sorcerer//Thunder Strike, Firestorm, Icy Spike, Asteriod
+-- Summoner//Summon Bear, Summon Wolf, Summon Hawk
+Thief:
+-- Ninja//Shuriken throw, Mark of Pain, Ninja's Dance
+-- Assassin//Assassinate, Shadow Walk, Nape Slice
+
+# These cannot be rescinded and will require a new character to choose (for now)
+# NOTE: will create a class action list in the future
+
+# TODO: CREATE CLASSES FOR EACH INDIVIDUAL STARTING CLASS ALONG WITH DMG PER ATTK AND BUFF EFFECTS 
+
+
+Enemy types:
+-- Slime//HP
