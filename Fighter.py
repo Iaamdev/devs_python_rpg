@@ -48,3 +48,6 @@ class Fighter:
                 else:
                     pass
             # FIX: -- if the player inputs an invalid input, reprompt them to make a valid input --
+
+    # NOTE: Re-up on class inheritance to possible use this on file for basic classes
+    # then create separate class for advance classes to make in depth class structure
