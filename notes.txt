@@ -27,3 +27,8 @@ Thief:
 
 Enemy types:
 -- Slime//HP
+
+
+Quick Notes:
+-- Possibly make class descriptions as an option when choosing classes?
+-- be able to choose functions such as "skills" (w/ description), "player condition", "inventory"
