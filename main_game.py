@@ -23,7 +23,7 @@ if choose_class == "FIGHTER":
 print(BORDER)
 
 
-# TODO: make a different "if" loop for each class
+# TODO: make a different "if" loop for each class (later)
 # NOTE: Currently working on fighter class hence fighter only path below
 while game_start:
 
@@ -45,12 +45,10 @@ while game_start:
         continue_game = input("Continue? (y/n):\n").upper()
         print(BORDER)
         if continue_game == "Y":
-            pass
+            continue
         elif continue_game == "N":
             game_start = False
 
 
 # TODO: Continue working on fighter class
 # TODO: Make an enemy to test out combat functions
-# TODO: Make descriptions of class skills in anohter file
-# for the player to then pull at the skill selection chooser
