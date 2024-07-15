@@ -1,7 +1,7 @@
+import resources
 from Fighter import Fighter
 
 # separator for text
-BORDER = "-" * 50
 
 game_start = True
 player_class = ""
@@ -14,13 +14,14 @@ choose_class = input(
 fighter_player = Fighter()
 # mage_player =
 # thief_player =
-print(BORDER)
+print(resources.BORDER)
 
 if choose_class == "FIGHTER":
     print("Fighter Chosen!!\n")
+    print("The Journey Begins!!\n")
     player_class = fighter_player
     fighter_player.status_bars()
-print(BORDER)
+print(resources.BORDER)
 
 
 # TODO: make a different "if" loop for each class (later)
@@ -28,22 +29,22 @@ print(BORDER)
 while game_start:
 
     if player_class == fighter_player:
+        # used currently to roll for enemy encounters
+        resources.enemy_enecounter_roll()
 
-        if fighter_player.xp == 20:
+        if fighter_player.xp >= resources.LEVELUP:
             fighter_player.lvl_up()
             fighter_player.status_bars()
-            print(BORDER)
+            print(resources.BORDER)
 
             if fighter_player.level % 3 == 0:
                 fighter_player.fighter_skill_up()
-
-        fighter_player.xp += 5
 
         print("The Traveling Continues...")
         # NOTE: a current loop for testing the lvl up sys. to
         # stop code
         continue_game = input("Continue? (y/n):\n").upper()
-        print(BORDER)
+        print(resources.BORDER)
         if continue_game == "Y":
             continue
         elif continue_game == "N":

@@ -42,15 +42,15 @@ ________________________________________________________________________________
 Enemy types:
 
 Low Level:
--- Slime//HP
--- Undead//
--- Skeleton//
--- Ghouls//
--- Bandit//
--- Goblin//
--- Orcs//
--- Wolf//
--- Spires//
+-- Slime
+-- Undead
+-- Skeleton
+-- Ghouls
+-- Bandit
+-- Goblin
+-- Orcs
+-- Wolf
+-- Spires
 
 Mid Level:
 -- Uruks//

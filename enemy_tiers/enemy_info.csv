@@ -1,0 +1,28 @@
+﻿enemy,hp,xp
+Slime,5,2
+Undead,15,2
+Skeleton,18,2
+Ghoul,20,2
+Bandit,25,2
+Goblin,13,2
+Orcs,30,2
+Wolf,8,2
+Spires,12,2
+Uruks,90,5
+Highwayman,85,5
+Shade,100,5
+Wright,120,5
+Lessor Demon,125,5
+Lycanthropes,135,5
+Harpy,115,5
+Mimics,110,5
+Wyrm,160,7
+Lich,200,7
+Drake,250,7
+Wendigo,220,7
+Greater Demon,225,7
+Hydra,300,7
+Basilisk,305,7
+Gorgon,310,7
+Minotaur,260,7
+Mindflayer,350,7

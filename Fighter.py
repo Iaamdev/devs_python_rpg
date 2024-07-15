@@ -1,10 +1,8 @@
-import colors
+# possibly rename python file to "classes.py"
 
-LEVELUP = 20
-BORDER = "-" * 50
-BARS = 35
-status_bar_symbol = "█"
-lost_bar_symbol = "_"
+import colors
+import resources
+
 fighter_skills = ["SHIELD BASH", "DOUBLE STRIKE", "FORTIFY"]
 is_paladin = False
 paladin_skills = ["HOLY STRIKE", "CURE", "DIVINE BLESSING", "SMITE'S HAMMER"]
@@ -18,12 +16,12 @@ class Fighter:
     def __init__(self):
         self.maxhp = 100
         self.chp = 100
-        self.remhp = round(self.chp / self.maxhp * BARS)
-        self.losshp = BARS - self.remhp
+        self.remhp = round(self.chp / self.maxhp * resources.BARS)
+        self.losshp = resources.BARS - self.remhp
         self.maxfp = 20
         self.cfp = 20
-        self.remfp = round(self.cfp / self.maxfp * BARS)
-        self.lossfp = BARS - self.remfp
+        self.remfp = round(self.cfp / self.maxfp * resources.BARS)
+        self.lossfp = resources.BARS - self.remfp
         self.defense = 20
         self.attack = 10
         self.xp = 0
@@ -34,21 +32,20 @@ class Fighter:
     def status_bars(self):
         print(f"HEALTH: {self.chp}/{self.maxhp}")
         print(
-            f"|{colors.color_green2}{self.remhp*status_bar_symbol}{self.losshp*lost_bar_symbol}{colors.color_default}|"
+            f"|{colors.color_green2}{self.remhp*resources.status_bar_symbol}{self.losshp*resources.lost_bar_symbol}{colors.color_default}|"
         )
         print(f"FOCUS: {self.cfp}/{self.maxfp}")
         print(
-            f"|{colors.color_blue1}{self.remfp*status_bar_symbol}{self.lossfp*lost_bar_symbol}{colors.color_default}|"
+            f"|{colors.color_blue1}{self.remfp*resources.status_bar_symbol}{self.lossfp*resources.lost_bar_symbol}{colors.color_default}|"
         )
 
     # def
 
     # level up player based on current xp
     def lvl_up(self):
-        if self.xp == LEVELUP:
+        if self.xp == resources.LEVELUP:
             self.level += 1
             print(f"Level Up!\nYou are now Level {self.level}")
-            self.xp = 0
             self.chp += 5
             self.maxhp += 5
             self.cfp += 5
@@ -61,13 +58,13 @@ class Fighter:
         while not skill_chosen:
             # used to break the loop if all skills are aquired
             if len(fighter_skills) == 0:
-                print("You Have all Fighter Skills!")
+                print("You have all current skills!")
                 print(f"Current Skills: {self.current_skills}")
                 break
             print(fighter_skills)
             skill_choice = input("Choose a Skill: \n").upper()
             # TODO: put description choice inside of the below if statement when
-            # ready
+            # ready (putting this inside of skilltree.py file)
             # NOTE: the below if is used to break out of skill choosing
             # loop for testing
             if skill_choice == "QUIT":
@@ -86,7 +83,7 @@ class Fighter:
                 else:
                     pass
             if skill_chosen:
-                print(BORDER)
+                print(resources.BORDER)
                 print(f"Current Skills: {self.current_skills}")
             # FIX: -- if the player inputs an invalid input, reprompt them to make a valid input --
 
