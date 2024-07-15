@@ -1,13 +1,15 @@
+import colors
+
 LEVELUP = 20
 BORDER = "-" * 50
-BARS = 20
-REMAINING_HEALTH_SYMBOL = "🟩"
-LOST_BAR_SYMBOL = "_"
-REMAINING_FOCUS_SYMBOL = "🟦"
+BARS = 35
+status_bar_symbol = "█"
+lost_bar_symbol = "_"
 fighter_skills = ["SHIELD BASH", "DOUBLE STRIKE", "FORTIFY"]
 is_paladin = False
-warrior_skills = ["Warcry", "Overhead Slam", "Haymaker"]
+paladin_skills = ["HOLY STRIKE", "CURE", "DIVINE BLESSING", "SMITE'S HAMMER"]
 is_warrior = False
+warrior_skills = ["WARCRY", "OVERHEAD SLAM", "HAYMAKER"]
 
 
 # Creating the Fighter Class along with advanced Classes
@@ -26,14 +28,18 @@ class Fighter:
         self.attack = 10
         self.xp = 0
         self.level = 1
-        self.current_skills = ["STRIKE", "BLOCK"]
+        self.current_skills = ["ATTACK", "BLOCK"]
 
     # give the player health bar based off of their HP and FP
     def status_bars(self):
         print(f"HEALTH: {self.chp}/{self.maxhp}")
-        print(f"|{self.remhp*REMAINING_HEALTH_SYMBOL}{self.losshp*LOST_BAR_SYMBOL}|")
+        print(
+            f"|{colors.color_green2}{self.remhp*status_bar_symbol}{self.losshp*lost_bar_symbol}{colors.color_default}|"
+        )
         print(f"FOCUS: {self.cfp}/{self.maxfp}")
-        print(f"|{self.remfp*REMAINING_FOCUS_SYMBOL}{self.lossfp*LOST_BAR_SYMBOL}|")
+        print(
+            f"|{colors.color_blue1}{self.remfp*status_bar_symbol}{self.lossfp*lost_bar_symbol}{colors.color_default}|"
+        )
 
     # def
 
@@ -60,8 +66,10 @@ class Fighter:
                 break
             print(fighter_skills)
             skill_choice = input("Choose a Skill: \n").upper()
-            # NOTE: the below elif is used to break out of skill choosing
-            # loop
+            # TODO: put description choice inside of the below if statement when
+            # ready
+            # NOTE: the below if is used to break out of skill choosing
+            # loop for testing
             if skill_choice == "QUIT":
                 break
             # NOTE: May want to change take off brackets in fighter_skills list
