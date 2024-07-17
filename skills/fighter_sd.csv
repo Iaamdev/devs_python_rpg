@@ -1,0 +1,11 @@
+,Skill,Description,Stats
+0,SHIELD BASH,"In the offhand, a Fighter may choose to bash an opponent with his shield and potentially stun the opponent",
+1,DOUBLE STRIKE,"As the Fighter strikes his opponent, he has the opportunity to strike a second time with less accuracy",
+2,FORTIFY,A Fighter may choose to brace himself in order to absorb damage or gain temporary armor class,
+3,HOLY STRIKE,"Calling upon his Deities divine retribution through his pious diligence, A Paladin may make one imbued strike which will deal extra damage against evil creatures, enemies of the faith and double damage against the undead",
+4,CURE,"Not only is a Paladin charged with his sanctimonious duty to slay, but he also lays merciful hands upon an ally or willing participant, doing this closes the wounds and stanches bleeding",
+5,DIVINE BLESSING,"In times of uncertainty, Hope is truly the armor for The Paladin, He prays to receive either a bonus to strike his opponent or potentially reroll a missed attack",
+6,SMITE'S HAMMER,"Through trials and tribulations, a Paladin learned that not just to slay, but to help his comrades hold down an opponent. He brings forth a blinding pillar of light to stun his opponent",
+7,WARCRY,"A universal sign of impending doom, the Warrior bellows out a bloodcurdling Warcry as he charges forth into glorious combat, his opponents seize up and potentially lose their nerve. The Warrior gains a bonus to movement speed",
+8,OVERHEAD SLAM,"Swinging side to side is overrated and monotonous to the Warrior, he feels to make a point by slamming his weapon over the opponents head. The Overhead Slam deals normal damage but has a chance to stun the opponent",
+9,HAYMAKER,"Doing labor in the fields was a form of discipline for the warrior, before he swung a sword, he swung a scythe. He applied this idea to either a weapon, fist or shield to make a potent strike. It has less accuracy than a conventional attack buy when successful, deals double damage",
