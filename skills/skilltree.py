@@ -19,7 +19,6 @@ fighter_data = pd.read_csv("fighter_sd.csv")
 mage_data = pd.read_csv("mage_sd.csv")
 thief_data = pd.read_csv("thief_sd.csv")
 f = Fighter()
-# TODO: create a dictionary for skills??
 
 
 def skill_check():
@@ -55,3 +54,6 @@ def skill_check():
             pass
         elif skill_choice == "N":
             skill_check_complete = True
+
+
+skill_check()
