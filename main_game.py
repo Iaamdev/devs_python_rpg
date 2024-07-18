@@ -1,5 +1,6 @@
 import resources
 from Fighter import Fighter
+from skills import skilltree as st
 
 # separator for text
 
@@ -43,10 +44,13 @@ while game_start:
         print("The Traveling Continues...")
         # NOTE: a current loop for testing the lvl up sys. to
         # stop code
-        continue_game = input("Continue? (y/n):\n").upper()
+        continue_game = input("Continue Skill check? (y/n):\n").upper()
         print(resources.BORDER)
         if continue_game == "Y":
-            continue
+            skill_check = input("Would you like to check your skills? (y/n):\n").upper()
+            if skill_check == "Y":
+                st.skill_check()
+                continue
         elif continue_game == "N":
             game_start = False
 
