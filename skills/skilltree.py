@@ -4,6 +4,7 @@ import pandas as pd
 
 sys.path.insert(1, "../")
 
+import resources
 from Fighter import (
     Fighter,
     fighter_skills,
@@ -26,28 +27,31 @@ def skill_check():
 
     # FIX: create a loop for displaying skill descriptions
     while not skill_check_complete:
+
         if f.level < 15:
             print(f"{fighter_skills}\n")
         elif f.level > 15 and is_paladin:
-            print(f"{paladin_skills}\n")
+            print(f"{fighter_skills + paladin_skills}\n")
         elif f.level > 15 and is_warrior:
-            print(f"{warrior_skills}\n")
+            print(f"{fighter_skills + warrior_skills}\n")
+
         # ask for user input on what skill they would like to view
         skill_choice = input("What skill would you like to view?:\n").upper()
-        # if their choice is == any skill within their class show
-        # the class description
-        # if skill_choice == fighter_data.Skill:
-        skill_check_complete = True
-        print(fighter_data.Skill)
-    # ask the user if they would like to look at another skill
-    # if not cancel the loop
+        print(resources.BORDER)
 
+        # run through the class row to check choice and display description
+        for key, row in fighter_data.iterrows():
+            if skill_choice == row.Skill[0:]:
+                print(f"Description: {row.Description}")
+                print(f"Stat Effects: {row.Stats}")
+                print(resources.BORDER)
 
-skill_check()
-
-# TODO: USE NEW LIST BELOW TO PULL THE SKILL DESCRIPTION
-# BASED ON skill_description_choice
-# print(skill_descript)
-# print(f"{f.fighter_skills}")
-#
-# skill_description_choice = input("Type the skill to view skill description: \n").upper()
+        # ask the user if they would like to look at another skill if not cancel the loop
+        skill_choice = input(
+            "Would you like to look at another skill? (y/n):\n"
+        ).upper()
+        if skill_choice == "Y":
+            print(resources.BORDER)
+            pass
+        elif skill_choice == "N":
+            skill_check_complete = True
