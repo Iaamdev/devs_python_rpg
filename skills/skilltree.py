@@ -36,6 +36,9 @@ def skill_check():
 
         # ask for user input on what skill they would like to view
         skill_choice = input("What skill would you like to view?:\n").upper()
+        if skill_choice == "QUIT":
+            skill_check_complete = True
+
         print(resources.BORDER)
 
         # run through the class row to check choice and display description
@@ -47,7 +50,7 @@ def skill_check():
 
         # ask the user if they would like to look at another skill if not cancel the loop
         skill_choice = input(
-            "Would you like to look at another skill? (y/n):\n"
+            "Would you like to look at another skill or try again? (y/n):\n"
         ).upper()
         if skill_choice == "Y":
             print(resources.BORDER)
