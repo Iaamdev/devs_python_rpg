@@ -36,8 +36,6 @@ def skill_check():
 
         # ask for user input on what skill they would like to view
         skill_choice = input("What skill would you like to view?:\n").upper()
-        if skill_choice == "QUIT":
-            skill_check_complete = True
 
         print(resources.BORDER)
 
