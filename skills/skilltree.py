@@ -15,6 +15,8 @@ from Fighter import (
 )
 
 BORDER = "-" * 50
+# FIX: when running "main_game.py", it cannot read the .csv files
+# Running into a file directory error -- FileNotFoundError..
 fighter_data = pd.read_csv("fighter_sd.csv")
 mage_data = pd.read_csv("mage_sd.csv")
 thief_data = pd.read_csv("thief_sd.csv")
@@ -24,7 +26,6 @@ f = Fighter()
 def skill_check():
     skill_check_complete = False
 
-    # FIX: create a loop for displaying skill descriptions
     while not skill_check_complete:
 
         if f.level < 15:

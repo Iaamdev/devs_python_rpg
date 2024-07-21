@@ -1,6 +1,6 @@
 import resources
-import skills
 from Fighter import Fighter
+from skills import skilltree
 
 game_start = True
 player_class = ""
@@ -47,7 +47,7 @@ while game_start:
         if continue_game == "Y":
             skill_check = input("Would you like to check your skills? (y/n):\n").upper()
             if skill_check == "Y":
-                skills.skill_check()
+                skilltree.skill_check()
                 continue
         elif continue_game == "N":
             game_start = False
