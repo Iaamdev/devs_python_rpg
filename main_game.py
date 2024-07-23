@@ -1,5 +1,10 @@
+import sys
+
 import resources
 from Fighter import Fighter
+
+sys.path.insert(1, "./skills/")
+
 from skills import skilltree
 
 game_start = True

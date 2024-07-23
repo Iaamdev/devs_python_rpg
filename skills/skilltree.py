@@ -2,7 +2,8 @@ import sys
 
 import pandas as pd
 
-sys.path.insert(1, "../")
+sys.path.insert(1, "/Users/iamdev_/Documents/GitHub/devs_python_rpg/")
+
 
 import resources
 from Fighter import (
@@ -14,9 +15,9 @@ from Fighter import (
     warrior_skills,
 )
 
-BORDER = "-" * 50
 # FIX: when running "main_game.py", it cannot read the .csv files
 # Running into a file directory error -- FileNotFoundError..
+# NOTE: just put everything in the absolute FP and try this later...
 fighter_data = pd.read_csv("fighter_sd.csv")
 mage_data = pd.read_csv("mage_sd.csv")
 thief_data = pd.read_csv("thief_sd.csv")
@@ -56,6 +57,3 @@ def skill_check():
             pass
         elif skill_choice == "N":
             skill_check_complete = True
-
-
-skill_check()
