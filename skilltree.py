@@ -1,9 +1,4 @@
-import sys
-
 import pandas as pd
-
-sys.path.insert(1, "/Users/iamdev_/Documents/GitHub/devs_python_rpg/")
-
 
 import resources
 from Fighter import (
@@ -57,3 +52,4 @@ def skill_check():
             pass
         elif skill_choice == "N":
             skill_check_complete = True
+            print(resources.BORDER)

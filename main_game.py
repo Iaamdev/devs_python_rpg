@@ -1,11 +1,6 @@
-import sys
-
 import resources
+import skilltree
 from Fighter import Fighter
-
-sys.path.insert(1, "./skills/")
-
-from skills import skilltree
 
 game_start = True
 player_class = ""
@@ -47,11 +42,12 @@ while game_start:
         print("The Traveling Continues...")
         # NOTE: a current loop for testing the lvl up sys. to
         # stop code
-        continue_game = input("Continue Skill check? (y/n):\n").upper()
+        continue_game = input("Continue? (y/n):\n").upper()
         print(resources.BORDER)
         if continue_game == "Y":
             skill_check = input("Would you like to check your skills? (y/n):\n").upper()
             if skill_check == "Y":
+                print(resources.BORDER)
                 skilltree.skill_check()
                 continue
         elif continue_game == "N":
