@@ -1,7 +1,9 @@
 import resources
 import skilltree
+from enemy_tiers.enemies import Slime
 from Fighter import Fighter
 
+enemy = Slime()
 game_start = True
 player_class = ""
 
@@ -20,8 +22,8 @@ if choose_class == "FIGHTER":
     print("The Journey Begins!!\n")
     player_class = fighter_player
     fighter_player.status_bars()
-print(resources.BORDER)
 
+print(resources.BORDER)
 
 # TODO: make a different "if" loop for each class (later)
 # NOTE: Currently working on fighter class hence fighter only path below
@@ -30,6 +32,10 @@ while game_start:
     if player_class == fighter_player:
         # used currently to roll for enemy encounters
         resources.enemy_enecounter_roll()
+        if resources.enemy_enecounter_roll() == True:
+            print(enemy.status_bars())
+        else:
+            pass
 
         if fighter_player.xp >= resources.LEVELUP:
             fighter_player.lvl_up()
