@@ -22,6 +22,11 @@ if choose_class == "FIGHTER":
     print("The Journey Begins!!\n")
     player_class = fighter_player
     fighter_player.status_bars()
+elif choose_class == "MAGE":
+    print("Mage Chosen!!\n")
+    print("The Journey Begins!!\n")
+    # player_class = mage_player
+    # mage_player.status_bars()
 
 print(resources.BORDER)
 
@@ -62,3 +67,5 @@ while game_start:
 
 # TODO: Continue working on fighter class
 # TODO: Make an enemy to test out combat functions
+# FIX: The health bar does not pop up after "The Traveling Continues"
+# like I want it to
