@@ -1,3 +1,4 @@
+import encounter
 import resources
 import skilltree
 from enemy_tiers.enemies import Slime
