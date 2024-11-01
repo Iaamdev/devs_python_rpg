@@ -39,8 +39,8 @@ class Fighter:
             f"|{colors.color_blue1}{self.remfp*resources.status_bar_symbol}{self.lossfp*resources.lost_bar_symbol}{colors.color_default}|"
         )
 
-    def player_attack(self):
-        if player
+    # def player_attack(self):
+    #     if player
 
     # level up player based on current xp
     def lvl_up(self):
