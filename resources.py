@@ -2,7 +2,7 @@ import random
 
 import pandas as pd
 
-from enemy_tiers.enemies import Slime
+import enemy_tiers.enemies
 
 LEVELUP = 20
 BORDER = "-" * 50
@@ -27,9 +27,10 @@ def enemy_enecounter_roll():
     enemy_encounter_chance = random.choice(number_chance)
     enemy_choice = random.choice(lte_list)
     # used to roll enemy if greater than 80
-    if enemy_encounter_chance > 80:
+    if enemy_encounter_chance > 70:
         print("You have encountered", enemy_choice.upper(), "!!")
         if enemy_choice == "SLIME":
+            enemy_tiers.enemies.Slime.status_bars()
         # FIX: add way to show status bars for slime
         # return True
     else:
